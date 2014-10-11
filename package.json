@@ -1,0 +1,29 @@
+{
+  "name": "chudnovsky",
+  "version": "0.0.0",
+  "description": "Estimate pi with the Chudnovsky algorithm",
+  "keywords": [
+    "math"
+  ],
+  "repository": "KenanY/chudnovsky",
+  "license": "MIT",
+  "author": "Kenan Yildirim <kenan@kenany.me> (http://kenany.me/)",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "LICENSE.txt"
+  ],
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "tape test/index.js"
+  },
+  "dependencies": {
+    "factorial": "^0.0.2"
+  },
+  "devDependencies": {
+    "lodash.isfunction": "^2.4.1",
+    "tape": "^3.0.0"
+  }
+}
