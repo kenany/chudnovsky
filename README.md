@@ -35,5 +35,5 @@ _Number_ `n`.
    [travis]: https://travis-ci.org/KenanY/chudnovsky
    [travis-svg]: https://img.shields.io/travis/KenanY/chudnovsky.svg
    [gemnasium]: https://gemnasium.com/KenanY/chudnovsky
-   [travis-svg]: https://img.shields.io/gemnasium/KenanY/chudnovsky.svg
+   [gemnasium-svg]: https://img.shields.io/gemnasium/KenanY/chudnovsky.svg
    [chudnovsky]: https://en.wikipedia.org/wiki/Chudnovsky_algorithm
