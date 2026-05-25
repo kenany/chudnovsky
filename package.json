@@ -1,29 +1,64 @@
 {
   "name": "chudnovsky",
-  "version": "1.0.3",
+  "version": "0.0.0-semantic-release",
   "description": "Estimate pi with the Chudnovsky algorithm",
   "keywords": [
     "math"
   ],
-  "repository": "KenanY/chudnovsky",
   "license": "MIT",
-  "author": "Kenan Yildirim <kenan@kenany.me> (http://kenany.me/)",
-  "main": "index.js",
+  "author": "Kenan Yildirim <kenan@kenany.me> (https://kenany.me/)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kenany/chudnovsky.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "commonjs",
+  "types": "dist/index.d.cts",
+  "main": "dist/index.cjs",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./*.mjs": {
+      "default": "./dist/*.mjs"
+    },
+    "./*.cjs": {
+      "default": "./dist/*.cjs"
+    },
+    "./*": {
+      "import": "./dist/*.mjs",
+      "require": "./dist/*.cjs"
+    }
+  },
   "files": [
-    "index.js",
+    "dist",
     "LICENSE.txt"
   ],
-  "directories": {
-    "test": "test"
+  "engines": {
+    "node": "22 || 24 || >=26"
   },
   "scripts": {
-    "test": "tape test/index.js"
+    "build": "tsdown && tsc --noEmit",
+    "lint": "biome check",
+    "test": "vitest run",
+    "publint": "publint --strict",
+    "prepare": "pnpm build"
   },
   "dependencies": {
-    "factorial": "^0.0.3"
+    "factorial": "^2.0.0"
   },
   "devDependencies": {
-    "lodash.isfunction": "^3.0.8",
-    "tape": "^4.6.0"
+    "@biomejs/biome": "2.4.15",
+    "@containerbase/semantic-release-pnpm": "1.4.1",
+    "@kenan/biome-config": "1.0.6",
+    "conventional-changelog-conventionalcommits": "9.3.1",
+    "publint": "0.3.21",
+    "semantic-release": "25.0.3",
+    "tsdown": "0.22.0",
+    "typescript": "6.0.3",
+    "vitest": "4.1.7"
   }
 }
