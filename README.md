@@ -4,7 +4,7 @@ Estimate pi with the [Chudnovsky algorithm][chudnovsky].
 
 ## Example
 
-``` javascript
+```javascript
 import { chudnovsky } from 'chudnovsky';
 
 chudnovsky(1);
@@ -13,13 +13,13 @@ chudnovsky(1);
 
 ## Installation
 
-``` bash
+```bash
 $ npm install chudnovsky
 ```
 
 ## API
 
-``` javascript
+```javascript
 import { chudnovsky } from 'chudnovsky';
 ```
 
@@ -27,6 +27,5 @@ import { chudnovsky } from 'chudnovsky';
 
 Estimate pi using the Chudnovsky algorithm, evaluating the infinite sum up to
 _Number_ `n`.
-
 
    [chudnovsky]: https://en.wikipedia.org/wiki/Chudnovsky_algorithm
